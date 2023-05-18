@@ -77,6 +77,6 @@ int main(int argc, char **argv) {
 
     t = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec);
     printf("%d\n", t);
-
+    free(v);
     return EXIT_SUCCESS;
 }
