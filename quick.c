@@ -37,11 +37,11 @@ void swap(int *a, int *b) {
   m = *a;
   *a = *b;
   *b = m;
-}
+}   
 
-int partition(int *v, unsigned int s, unsigned int e) {
-    unsigned int i;
-    unsigned int d = s - 1;
+int partition(int *v, int s, int e) {
+    int i;
+    int d = s - 1;
     for (i=s;i<e;i++) {
         if (v[i] <= v[e]) {
             d++;
@@ -52,7 +52,7 @@ int partition(int *v, unsigned int s, unsigned int e) {
     return (d+1);
 }
 
-void quick_sort(int *v, unsigned int s, unsigned int e) {
+void quick_sort(int *v, int s, int e) {
   if (s < e) {
     int p = partition(v, s, e);
     quick_sort(v, s, p-1);
@@ -63,7 +63,7 @@ void quick_sort(int *v, unsigned int s, unsigned int e) {
 int main(int argc, char **argv) {
     struct timespec start, end;
     unsigned int t;
-    unsigned int n = atoi(argv[1]);
+    int n = atoi(argv[1]);
     int i, *v;
     v = (int *)malloc(n * sizeof(int));
     srand(time(NULL));
