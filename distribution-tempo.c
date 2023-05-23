@@ -87,7 +87,7 @@ int main(int argc, char **argv) {
     v = (int *)malloc(n * sizeof(int));
     srand(time(NULL));
     for (i = 0; i < n; i++) {
-        v[i] = n-i;
+        v[i] = rand() % 10000;
     }
 
     if (clock_gettime(CLOCK_MONOTONIC, &start) == -1) {
