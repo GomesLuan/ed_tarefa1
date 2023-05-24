@@ -72,7 +72,7 @@ int main(int argc, char **argv) {
     v = (int *)malloc(n * sizeof(int));
     srand(time(NULL));
     for (i = 0; i < n; i++) {
-        v[i] = rand();
+        v[i] = rand() % 32768;
     }
     distribution_sort(v, n);
     free(v);
